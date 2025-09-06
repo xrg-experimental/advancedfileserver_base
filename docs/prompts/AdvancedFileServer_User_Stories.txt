@@ -1,0 +1,12 @@
+Assume you are a Product Manager and responsible for the development of the AdvancedFileServer.
+We have software developers with detailed knowledge in different disciplines. You are asked to
+take the attached document and generate a long list of user stories to make all parts of the
+app vivid. You can consider an existing list of user stories which may be outdated and incomplete.
+The developers should decide step by step which user story they should implement next.
+You should generate additional stories for the developers to make the implementation steps smaller,
+e.g. creating and installing a dummy package on the NAS can be a valuable step forward. Please
+create a numbered list. The developers should reference the user stories number by number to
+document the steps they are working on.
+
+attach architecture-design.md and AdvancedFileServer_User_Stories.md
+

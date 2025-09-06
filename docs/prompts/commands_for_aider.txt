@@ -1,0 +1,56 @@
+DSM Package Structure
+
+I want to create installable packages for Synology NAS devices. I am using the development toolkit from Synology
+as described in the Developer Guide for version 7 of the DMS with chroot commands and scripts from
+https://github.com/SynologyOpenSource/pkgscripts-ng, branch DSM7.2. The main script I use is PkgCreate.py.
+
+
+Create the files needed for PkgCreate.py to create a DSM package with the name AdvancedFileServer_Server.
+Here are some data points.
+version: 0.1.1-001
+os_min_ver: 7.2-64555
+description: "The AdvancedFileServer is a Synology package designed to provide secure file sharing capabilities with
+              a focus on client separation and granular access control. It integrates with DSM's existing storage and
+              security infrastructure while providing additional features for external sharing and user management."
+arch: "x86_64 armv8"
+
+Create just the minimal needed files and add no extra code. I cannot progress without testing package install on a
+test DSM.
+
+--------------------------------------
+for package AdvancedFileServer:
+
+/read-only AdvancedFileServer/conf/privilege
+/add AdvancedFileServer/scripts/postupgrade
+     AdvancedFileServer/scripts/preupgrade
+     AdvancedFileServer/scripts/start-stop-status
+     AdvancedFileServer/SynoBuildConf/build
+     AdvancedFileServer/SynoBuildConf/install
+     AdvancedFileServer/INFO.sh
+
+--------------------------------------
+for afs-srv:
+
+/add afs-srv/pom.xml
+/add afs-srv/src
+/add afs-srv/.gitignore
+
+--------------------------------------
+for all steps:
+
+/read-only docs/AdvancedFileServer_Architecture_Design.md
+/read-only docs/AdvancedFileServer_User_Stories.md
+/read-only docs/aider-reference.md
+/add docs/AdvancedFileServer_Implementation.md
+
+Start a command with:
+
+Given the aider-reference, help me implement the database initialization script following our standard paths and SQLite configuration.
+
+Given the aider-reference, help me implement the basic SQLite configuration in Spring Boot with:
+- Database file location in package persistent storage
+- Basic user and group entity schemas
+
+Given the aider-reference, help me implement tests for the basic user and group functions.
+
+Given the aider-reference, help me implement the switch from SQLite to PostgreSQL as in docs/AdvancedFileServer_PostgreSQL.md described.

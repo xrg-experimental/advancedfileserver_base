@@ -1,0 +1,16 @@
+Assume you are a Software Architect and have detailed knowledge of Synology NAS package development as described in the official documents. I am working at a small company (SME) with only reduced software development resources and experience. We have worked with Java Spring Boot on the back-end and Angular on the front-end. We want to exchange data documents with our customers without involving third-party cloud providers for file storage.
+
+We have 3 types of users:
+
+1. External users without account.
+Users of our company should be able to create password protected links to files or folders for external users. This type of link must have an expiration date. The addressed external user can see multiple files in a folders and select, what to download. It should be possible to allow also the upload of files into the shared folder for the external user.
+
+2. Users with account.
+Users may register themself for an account. An administrator of our company must approve each account. Internal users should register in the same way but are marked as internal by the administrator. Only internal users are allowed to create links. We have client separation for different groups of users. Documents are structured in directories similar to the Windows Explorer.
+
+3. Administrators
+Multiple administrators from our company are allowed to approve or block users, create new groups of users and create base directories. All configurations e. g. for the external mail server are done by administrators.
+
+The name of the app and the main package shall be `AdvancedFileServer`.
+
+Can you write me a structured (markdown) document with your architecture design without too much details? This document shall be the start point for detailed specification.

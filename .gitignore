@@ -1,0 +1,8 @@
+.aider*
+.env
+.idea/
+.prompts/
+/java
+*.spk
+*.db
+postgres-data/
