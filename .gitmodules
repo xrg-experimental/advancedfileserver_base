@@ -1,0 +1,9 @@
+[submodule "afs-srv"]
+	path = afs-srv
+	url = https://github.com/xrg-experimental/advancedfileserver_backend.git
+[submodule "afs-ui"]
+	path = afs-ui
+	url = https://github.com/xrg-experimental/advancedfileserver_frontend.git
+[submodule "AdvancedFileServer"]
+	path = AdvancedFileServer
+	url = https://github.com/xrg-experimental/advancedfileserver_package.git
